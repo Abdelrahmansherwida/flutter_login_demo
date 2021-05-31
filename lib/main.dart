@@ -29,12 +29,11 @@ class _MyHomePageState extends State<MyHomePage> {
           primaryColor: Colors.purple,
           // defualt font
           fontFamily: 'almarai',
-          // defualt button
+          // defualt button style
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-              primary: Colors.teal,
+              primary: Colors.purple,
               onPrimary: Colors.white,
-              onSurface: Colors.grey,
             ),
           ),
         ),
@@ -81,11 +80,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: ElevatedButton(
                       onPressed: () {},
                       child: Text('تسجيل الدخول'),
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.teal,
-                        onPrimary: Colors.white,
-                        onSurface: Colors.grey,
-                      ),
                     ),
                   )
                 ])));
