@@ -27,7 +27,8 @@ class _MyHomePageState extends State<MyHomePage> {
         theme: new ThemeData(
           // defualt color
           primaryColor: Colors.purple,
-
+          // defualt font
+          fontFamily: 'almarai',
           // defualt button
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
