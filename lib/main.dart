@@ -16,35 +16,59 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        // to make app direction change
+        builder: (context, child) {
+          return Directionality(
+            textDirection: TextDirection.rtl,
+            child: child,
+          );
+        },
+        // to make app direction change
+        theme: new ThemeData(
+          // defualt color
+          primaryColor: Colors.purple,
+
+          // defualt button
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.teal,
+              onPrimary: Colors.white,
+              onSurface: Colors.grey,
+            ),
+          ),
+        ),
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-            appBar: AppBar(title: Text("menu")),
+            appBar: AppBar(
+              title: Text("تسجيل الدخول"),
+            ),
             body: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   // user input
 
                   Container(
-                    width: double.infinity,
+                    alignment: Alignment.center,
+                    width: 300,
                     child: Card(
                       child: TextFormField(
                         decoration: InputDecoration(
                             border: UnderlineInputBorder(),
-                            labelText: 'Enter your username'),
+                            labelText: 'ادخل البريد الإلكتروني'),
                       ),
                     ),
                   ),
                   //  password input
                   Container(
-                    width: double.infinity,
+                    width: 300,
                     child: Card(
-                      // color: Colors.blueGrey,
+                      // color: Colors.,
                       child: TextFormField(
                         obscureText: true,
                         decoration: InputDecoration(
                             border: UnderlineInputBorder(),
-                            labelText: 'password'),
+                            labelText: 'كلمة المرور'),
                       ),
                     ),
                   ),
@@ -55,7 +79,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     margin: EdgeInsets.all(10),
                     child: ElevatedButton(
                       onPressed: () {},
-                      child: Text('Login'),
+                      child: Text('تسجيل الدخول'),
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.teal,
+                        onPrimary: Colors.white,
+                        onSurface: Colors.grey,
+                      ),
                     ),
                   )
                 ])));
